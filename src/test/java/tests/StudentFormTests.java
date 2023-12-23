@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 public class StudentFormTests extends TestBase implements HelperStudent {
     @BeforeClass
     public void goToPracticeForm(){
+        hideFooter();
         selectPracticeForm();
     }
 
@@ -19,8 +20,8 @@ public class StudentFormTests extends TestBase implements HelperStudent {
         //WebElement element = driver.findElement(By.xpath("#outbrain_widget_0"));
         StudentDTO student = new StudentDTO("Frodo", "Baggins","frodobaggins@mail.com", "Male",
                 "1234567890",
-                "10 Sep 2020","Math","Sports","J.Washington street","NCR","Delphi");
-        fillStudentForm();
+                "10 Sep 2020","Maths,English","Sports","J.Washington street","NCR","Delphi");
+        fillStudentForm(student);
 
     }
 
